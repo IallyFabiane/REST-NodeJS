@@ -6,7 +6,8 @@
     "mariadb": "^3.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "phpmyadmin": "^0.0.1-security"
+    "phpmyadmin": "^0.0.1-security",
+    "sequelize": "^6.17.0"
   },
   "name": "projeto-node-js-rest",
   "version": "1.0.0",
@@ -19,6 +20,18 @@
     "type": "git",
     "url": "git+https://github.com/IallyFabiane/REST-NodeJS.git"
   },
+  
+  "keywords": [
+    "node",
+    "rest-api",
+    "tutorial",
+    "mysql",
+    "phpMyAdmin",
+    "docker",
+    "node.js",
+    "sequilize"
+  ],
+
   "author": "ially",
   "license": "ISC",
   "bugs": {
