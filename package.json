@@ -5,6 +5,7 @@
     "express": "^4.17.3",
     "mariadb": "^3.0.0",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "phpmyadmin": "^0.0.1-security"
   },
   "name": "projeto-node-js-rest",
