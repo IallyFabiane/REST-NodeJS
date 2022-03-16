@@ -20,18 +20,6 @@
     "type": "git",
     "url": "git+https://github.com/IallyFabiane/REST-NodeJS.git"
   },
-  
-  "keywords": [
-    "node",
-    "rest-api",
-    "tutorial",
-    "mysql",
-    "phpMyAdmin",
-    "docker",
-    "node.js",
-    "sequilize"
-  ],
-
   "author": "ially",
   "license": "ISC",
   "bugs": {
