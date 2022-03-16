@@ -3,7 +3,9 @@
     "body-parser": "^1.19.2",
     "consign": "^0.1.6",
     "express": "^4.17.3",
-    "mysql": "^2.18.1"
+    "mariadb": "^3.0.0",
+    "mysql": "^2.18.1",
+    "phpmyadmin": "^0.0.1-security"
   },
   "name": "projeto-node-js-rest",
   "version": "1.0.0",
