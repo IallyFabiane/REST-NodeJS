@@ -1,4 +1,4 @@
-const { query } = require('express')
+const query  = require('express')
 const moment = require('moment')
 const conexao =  require('../infraestrutura/conexao')
 class Atendimento {
@@ -61,6 +61,20 @@ class Atendimento {
                 res.status(400).json(erro)
             } else {
                 res.status(200).json(atendimento)
+            }
+        })
+    }
+
+    altera(id, valores, res) {
+       // if (valores.data) {
+       //     valores.data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:mm:ss')
+       // }
+        const sql = 'UPDATE Atendimentos SET ? WHERE id=?'
+        conexao.query(sql, [valores, id], (erro, resultados) => {
+            if (erro) {
+                res.status(400).json(erro)
+            } else {
+                res.status(200).json(resultados)
             }
         })
     }
