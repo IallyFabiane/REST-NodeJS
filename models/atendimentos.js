@@ -1,7 +1,6 @@
 const axios = require('axios')
 const query  = require('express')
 const moment = require('moment')
-const axios = require('axios')
 const conexao =  require('../infraestrutura/conexao')
 class Atendimento {
     adiciona(atendimento, res) {
@@ -31,7 +30,6 @@ class Atendimento {
             res.status(400).json(erros)
         } else {
             const atendimentoDatado = {...atendimento, dataCriacao, data}
-            const sql = 'INSERT INTO Atendimentos SET ?'
             conexao.query(sql, atendimentoDatado, (erro, resultados) => {
                 if(erro) {
                     res.status(400).json(erro)
