@@ -3,7 +3,7 @@ const pets = require('../controllers/pets')
 const conexao = require('../infraestrutura/conexao')
 const uploadDeArquivo = require('../arquivos/uploadDeArquivos')
 class Pet {
-    adiciona(pet, res) {
+    adiciona(pet) {
         const query = 'INSERT INTO Pets SET ?'
         uploadDeArquivo(pet.imagem, pet.nome,(novoCaminho) => {
             const novoPet = {nome: pet.nome, imagem: novoCaminho}
@@ -20,5 +20,5 @@ class Pet {
     }
 }
 
-module.exports = new Pet;
+module.exports = new Pet
     
