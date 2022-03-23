@@ -3,13 +3,13 @@ const pets = require('../controllers/pets')
 const conexao = require('../infraestrutura/conexao')
 const uploadDeArquivo = require('../arquivos/uploadDeArquivos')
 class Pet {
-    adiciona(pet) {
+    adiciona(pet, res) {
         const query = 'INSERT INTO Pets SET ?'
         uploadDeArquivo(pet.imagem, pet.nome, (erro, novoCaminho) => {
             if (erro) {
                 res.status(400).json({ erro })
             } else {
-                const novoPet = {nome: pet.nome, imagem: novoCaminho}
+                const novoPet = { nome: pet.nome, imagem: novoCaminho }
                 conexao.query(query, novoPet, erro => {
                     if (erro) {
                     console.log(erro)
@@ -25,5 +25,5 @@ class Pet {
     }
 }
 
-module.exports = new Pet;
+module.exports = new Pet ();
     
