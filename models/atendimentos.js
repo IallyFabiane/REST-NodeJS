@@ -1,6 +1,7 @@
-const { default: axios } = require('axios')
+const axios = require('axios')
 const query  = require('express')
 const moment = require('moment')
+const axios = require('axios')
 const conexao =  require('../infraestrutura/conexao')
 class Atendimento {
     adiciona(atendimento, res) {
