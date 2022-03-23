@@ -4,7 +4,7 @@ const bodyparser = require('body-parser')
 const app = new express()
 const faker = require('faker')
 
-app.use(bodyParser())
+app.use(bodyparser())
 
 app.get('/:cpf', (req, res) => {
     const { cpf } = req.params
