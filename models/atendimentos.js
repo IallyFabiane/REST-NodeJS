@@ -1,18 +1,17 @@
 const axios = require('axios')
-const query  = require('express')
 const moment = require('moment')
 const conexao =  require('../infraestrutura/database/conexao')
 const repositorio = require('../repositorios/atendimentos')
 class Atendimento {
     adiciona(atendimento) {
         construtor() {
-            this.dataEhValida = ({data, dataCriacao}) => moment(data).isSameOrAfter(dataCriacao)
+            this.dataEhValida = ({ data, dataCriacao }) => moment(data).isSameOrAfter(dataCriacao)
             this.clienteEhValido = (tamanho) => tamanho >= 5
             this.valida = parametros =>
             this.validacoes.filter(campo => {
             const { nome } = campo
             const parametro = parametros[nome]
-            return !campo.valido(parametro)
+            return !campo.valido(parametro);
             })
             this.validacoes = [
                 {
@@ -87,10 +86,10 @@ class Atendimento {
             if (erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json({id})
+                res.status(200).json({ id })
             }
         } )
     }
 }
 
-module.exports = new Atendimento
+module.exports = new Atendimento()
